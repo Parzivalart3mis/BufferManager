@@ -24,33 +24,6 @@ The buffer manager implements the following key features:
 4. Forcing single pages or entire pool to disk
 5. FIFO and LRU page replacement strategies
 
-## Contribution
-The following functions in `buffer_mgr.c` were implemented by:
-
-- Yash Vardhan Sharma:
-    - `initBufferPool`
-    - `shutdownBufferPool`
-    - `forceFlushPool`
-
-- Prakriti Sharma:
-    - `updateLRUOrder`
-    - `getFrameContents`
-
-- Kamakshya Nanda:
-    - `getDirtyFlags`
-    - `getFixCounts`
-    - `getNumReadIO`
-    - `getNumWriteIO`
-
-- All team member contribution(Yash, Prakriti and Kamakshya):
-  - `pinPage`
-  - `unpinPage`
-  - `forcePage`
-  - `findFrameToReplace`
-  - `markDirty`
-
-All team members collaborated on the overall design, testing, and debugging of the buffer manager implementation.
-
 ## Notes
 - The implementation assumes that the page size is 4096 bytes (PAGE_SIZE).
 - Error handling is done using the RC (Return Code) system defined in `dberror.h`.
